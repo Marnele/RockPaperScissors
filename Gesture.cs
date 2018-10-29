@@ -1,28 +1,22 @@
 ﻿using System;
-namespace RockPaperScissorsGame
+namespace RPSLS
 {
-    class Gesture
+    public class Gesture
     {
         // member variables (HAS A)
-        public Gesture gesture;
 
-       
-        // constructor(RESPAWN)
-        public Gesture()
-        {
-            gesture = new Gesture;
-        }
+        // constructor
+
 
         // member methods (CAN DO)
-        public string gesture()
-       {
-            string[] arr = new string[];
+        static void GestureArray()
+        {
+            string[] arr = new string[5];
             arr[0] = "paper";
             arr[1] = "rock";
             arr[2] = "scissors";
             arr[3] = "spock";
             arr[4] = "lizard";
         }
-}
-}
+    }
 }

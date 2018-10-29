@@ -1,72 +1,45 @@
 ﻿using System;
-namespace RockPaperScissorsGame
+namespace RPSLS
 {
-    class Player
+    public class Player:Game
     {
-            // member variables(HAS A)
-            public Player1 player1;
-            public Player2 player2;
-            public Winner winner;
+        // member variables (HAS A)
+        public string roundWinner;
+        public int Numbers;
 
-            // constructor(RESPAWN)
-
-      
-
-
-
-            // member methods (CAN DO)
-
-            public void MainMenu() //Begins the game when player selects an option
-            {
-                Console.WriteLine("Type (1) to start a 1-Player game.");
-                Console.WriteLine("Type (2) to start a 2-Player game.");
-
-                string NumberOfPlayers = Console.ReadLine();
-
-                switch (NumberOfPlayers)
-                {
-                    case "1":
-                        Human.BeginGame();
-                        break;
-                }
-
-            }
-
-            public Player() //Passes info to Game.cs about players
-            {
-                public void gamePlayers()
-                {
-                    if (NumberOfPlayers == "1")
-
-                    {
-                        player1 = Human();
-                        player2 = Computer();
-                    }
-                    else if (NumberOfPlayers == "2")
-
-                    {
-                        player1 = Human();
-                        player2 = Human();
-                    }
-                }
-
-            public void DisplayWinner() //Campares and defines winner
-            {
-                if (player1 == player2)
-                {
-                   winner = Console.WriteLine("It's a tie!");
-                }
-                else if (player1 == "Rock" && player2 == "Scissors" || player1 == "Paper" && player2 == "Rock" || player1 == "Scissors" && player2 == "Paper" || player1 == "lizard" && player2 == "spock")
-                {
-                    winner = Console.WriteLine("Player 1 Wins!");
-                }
-                else
-                {
-                    winner = Console.WriteLine("Player 2 Wins!");
-                }
-            }
-
-
+        // constructor
+        public Player()
+        {
+            roundWinner = "Pending";
         }
+
+        // member methods (CAN DO)
+        static void MainMenu() //Begins the game when player selects an option
+        {
+            Console.WriteLine("Play Rock, Paper, Scissors, Lizard Spock");
+            Console.ReadLine();
+
+            Console.WriteLine("Type (1) to start a 1-Player game.");
+            Console.WriteLine("Type (2) to start a 2-Player game.");
+            int Numbers = Convert.ToInt32(Console.ReadLine());
+
+            if (Numbers == 1)
+            {
+                Console.WriteLine("Human vs. Computer");
+                Console.ReadLine();
+            }
+            else if (Numbers == 2)
+            {
+                Console.WriteLine("Human vs. Human");
+                Console.ReadLine();
+            }
+            else 
+            {
+                Console.WriteLine("Whoops! Try again!");
+            }
+
+            }
+        }
+
     }
-}
+

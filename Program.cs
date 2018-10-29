@@ -1,10 +1,18 @@
 ﻿using System;
-namespace RockPaperScissorsGame
+
+namespace RPSLS
 {
-    public class Program
+    class Program
     {
-        public Program()
+        static void Main(string[] args)
         {
+
+           Player beginGame = new beginGame();
+
+            beginGame.MainMenu();
+
+            Console.ReadLine();
+
         }
     }
 }

@@ -1,56 +1,52 @@
 ﻿using System;
-namespace RockPaperScissorsGame
+namespace RPSLS
 {
-    class Human : Player
+    public class Human
     {
         // member variables (HAS A)
-        public PlayerOneInput playerOneInput;
+        public Player playerOne;
+        public Player playerTwo;
+        public Game gameWinner;
+        public string roundWinner;
+       
 
 
-        // constructor(RESPAWN)
-        public playerOneInput() //Receives player input and updates new value
-        {
-            this.playerOneInput = playerOneInput;
-        }
-
-
-        // member methods (CAN DO)
-        public void HumanInput() //Allows player input
-        {
-            Console.WriteLine("Type (Paper) for 'Paper'");
-            Console.WriteLine("Type (Rock) for 'Rock'");
-            Console.WriteLine("Type (Scissors) for 'Scissors'");
-            Console.WriteLine("Type (Spock) for 'Spock'");
-            Console.WriteLine("Type (Lizard) for 'Lizard'");
-
-            playerOneInput = Console.ReadLine();
-
-            switch (playerOneInput)
+            static void MainMenu() //Allows player input
             {
-                case "Paper":
-                    Console.ReadLine(playerOneInput);
-                    break;
+                Console.WriteLine("Type (Paper) for 'Paper'");
+                Console.WriteLine("Type (Rock) for 'Rock'");
+                Console.WriteLine("Type (Scissors) for 'Scissors'");
+                Console.WriteLine("Type (Spock) for 'Spock'");
+                Console.WriteLine("Type (Lizard) for 'Lizard'");
 
-                case "Rock":
-                    Console.ReadLine(playerOneInput);
-                    break;
+                string playerInput = Console.ReadLine();
 
-                case "Scissors":
-                    Console.ReadLine(playerOneInput);
-                    break;
+                switch (playerInput)
+                {
+                    case "Paper":
+                        Console.ReadLine();
+                        break;
 
-                case "Spock":
-                    Console.ReadLine(playerOneInput);
-                    break;
+                    case "Rock":
+                        Console.ReadLine();
+                        break;
 
-                case "Lizard":
-                    Console.ReadLine(playerOneInput);
-                    break;
-                default:
-                    Console.WriteLine("Invalid entry. Try again");
-                    break;
+                    case "Scissors":
+                        Console.ReadLine();
+                        break;
+
+                    case "Spock":
+                        Console.ReadLine();
+                        break;
+
+                    case "Lizard":
+                        Console.ReadLine();
+                        break;
+                    default:
+                        Console.WriteLine("Invalid entry. Try again");
+                        break;
+                }
+               MainMenu();
             }
-            HumanInput();
         }
     }
-}
